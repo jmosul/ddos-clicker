@@ -1,6 +1,8 @@
 <template>
   <div class="clicker">
-    <button type="button" @click="fireClick">Fire</button>
+    <v-btn outline large fab color="white" @click="fireClick">
+      <v-icon>wifi_tethering</v-icon>
+    </v-btn>
   </div>
 </template>
 
@@ -25,6 +27,7 @@
 
         fireClick() {
             this.clickCounter.registerClick(this.clickStrength);
+
 
             this.fireUpdate();
         }
